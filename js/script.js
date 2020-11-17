@@ -4,20 +4,28 @@
 
 
 var numeri=[];
-var numero;
 var optionOne = "Fizz";
 var optionTwo = "Buzz";
 var optionTree = "FizzBuzz";
 
-for (var i = 1; i < 101; i++) {
+for (var i = 1 ; i <= 100; i++) {
 
-  numero= i;
-  numeri.push(numero);
+  if (i % 3 == 0 && i % 5 == 0) {
 
-  // if (numeri[i] %2 = 0) {
-  //
-  //   console.log("fizz")
-  //
-  // }
+    numeri.push(optionTree);
+
+  }else if(i % 3 == 0) {
+
+    numeri.push(optionOne);
+
+  }else if(i % 5 == 0){
+
+  numeri.push(optionTwo);
+
+  } else{
+
+    numeri.push(i)
+
+  }
 }
 console.log(numeri);
